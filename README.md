@@ -2,7 +2,9 @@
 
 A small 2D game
 
-![so_long](https://media.giphy.com/media/eL9hzVpDFWVjCdL3PS/giphy.gif)
+<div align="center">
+<img alt = "Jogo" src = "https://media.giphy.com/media/eL9hzVpDFWVjCdL3PS/giphy.gif">
+</div>
 
 ## Game rules
 
