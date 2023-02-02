@@ -1,5 +1,7 @@
 #include "../includes/so_long.h"
 
+// show game image on the window
+// put player image
 int	ft_expose(t_mlx *mlx)
 {
 	map_base_print(mlx);
@@ -8,6 +10,7 @@ int	ft_expose(t_mlx *mlx)
 	return(0);
 }
 
+// function to close the game
 int	close_game(t_mlx *mlx)
 {
 	free_mlx(mlx);

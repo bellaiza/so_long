@@ -1,5 +1,8 @@
 #include "../includes/so_long.h"
 
+// put images based in their names in the window
+// we are using 32 pixels as block size
+// so we jump 32 pixels to put each image
 void	map_base_print(t_mlx *mlx)
 {
 	int	row;
@@ -29,6 +32,7 @@ void	map_base_print(t_mlx *mlx)
 	}
 }
 
+// put player in correct position on map
 int	player_location(t_mlx *mlx)
 {
 	int	row;
@@ -52,6 +56,8 @@ int	player_location(t_mlx *mlx)
 	return(0);
 }
 
+// put all images at game start
+// the image are placed based on map symbols
 int	initial_print(t_game *game, t_mlx *mlx)
 {
 	int	row;
@@ -79,6 +85,7 @@ int	initial_print(t_game *game, t_mlx *mlx)
 	return(0);
 }
 
+// get window size based on quantity of tiles mutipled by their size
 int	map_size(t_game *game)
 {
 	game->width = game->col * 32;
@@ -86,6 +93,7 @@ int	map_size(t_game *game)
 	return (0);
 }
 
+// load images to use during the game
 void	image_create(t_game *game, t_mlx *mlx)
 {
 	mlx->new_c_flag = 0;

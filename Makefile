@@ -1,6 +1,7 @@
 NAME =		so_long
 CC   =		gcc
 FLAGS =		-Wall -Wextra -Werror
+RM = 		/bin/rm -f
 LIB_FLAGS =  -lft -lmlx -lXext -lX11
 LIBFT_PATH = libft
 MLX_PATH = 	mlx

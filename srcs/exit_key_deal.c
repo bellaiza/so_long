@@ -1,5 +1,6 @@
 #include "../includes/so_long.h"
 
+//receive the movement and check if the target block is an exit
 void	a_input_exit(t_mlx *mlx)
 {
 	if (mlx->new_c_flag == mlx->old_c_flag)
