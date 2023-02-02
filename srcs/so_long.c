@@ -1,6 +1,7 @@
 #include "../includes/so_long.h"
 
-// constantly show game image on window
+// show game image on the window
+// put player image
 int	ft_expose(t_mlx *mlx)
 {
 	map_base_print(mlx);
