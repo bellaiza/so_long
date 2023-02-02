@@ -1,5 +1,7 @@
 #include "../includes/so_long.h"
 
+// receive the player input to move and check if 
+// the target block is a wall, floor, collectable or exit
 void	a_input(t_mlx *mlx)
 {
 	mlx->p_x -= 32;

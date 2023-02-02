@@ -1,5 +1,7 @@
 #include "../includes/so_long.h"
 
+// first check if user speciefied a map to play
+// and check if the map is valid
 int	map_input(int argc, char **argv, t_game *game)
 {
 	if (argc == 1)
@@ -23,6 +25,8 @@ int	map_input(int argc, char **argv, t_game *game)
 	return (0);
 }
 
+// open the map and read the map
+// closer after read
 int	map_deal(t_game *game)
 {
 	int		gnl;
@@ -30,7 +34,7 @@ int	map_deal(t_game *game)
 	char	*temp;
 
 	map_row(game);
-	game->fd = open (game->map_file, O_RDONLY);
+	game->fd = open(game->map_file, O_RDONLY);
 	if (game->fd == -1)
 		error_reading();
 	index = 0;
@@ -50,6 +54,7 @@ int	map_deal(t_game *game)
 	return (0);
 }
 
+// auxiliar function to read a line
 int	map_row(t_game *game)
 {
 	int		ret;
@@ -75,6 +80,7 @@ int	map_row(t_game *game)
 	return (0);
 }
 
+// function to check if map is surrounded by walls
 int	map_check_wall(t_game *game)
 {
 	int	row;
@@ -103,6 +109,8 @@ int	map_check_wall(t_game *game)
 	return (0);
 }
 
+// count number of player, collectable and exits inside the map
+// should have only 1 player and 1 exit
 int	map_check_inside(t_game *game)
 {
 	int	row;

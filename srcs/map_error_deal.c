@@ -1,5 +1,6 @@
 #include "../includes/so_long.h"
 
+// check if quantity of game essential objects are valid 
 int	check_inside_error(t_game *game)
 {
 	if (game->e_flag == 0 || game->c_flag == 0 || game->p_flag != 1)
@@ -12,6 +13,7 @@ int	check_inside_error(t_game *game)
 	return (0);
 }
 
+// check if symbols used in the map are all valid
 int	map_check_zero(t_game *game)
 {
 	int	row;
@@ -30,7 +32,7 @@ int	map_check_zero(t_game *game)
 				game->map_flag++;
 			else
 			{
-				printf ("The map must only contain 0 as tile setting :) \n");
+				printf ("The map must contain only 0,1,P,C or E :) \n");
 				exit(1);
 				return (1);
 			}
@@ -41,6 +43,7 @@ int	map_check_zero(t_game *game)
 	return (0);
 }
 
+// check if map file extension is .ber
 int	check_ber(t_game *game, char *ber)
 {
 	int	counter;
@@ -57,6 +60,7 @@ int	check_ber(t_game *game, char *ber)
 	return (0);
 }
 
+// an auxilar function to print an error and exit immediatly
 int	error_reading(void)
 {
 	printf("\nIt seems like there's a error in the map reading :/\n");

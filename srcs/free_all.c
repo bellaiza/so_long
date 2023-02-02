@@ -1,5 +1,6 @@
 #include "../includes/so_long.h"
 
+//função para dar free na mlx
 void	free_mlx(t_mlx *mlx)
 {
 	int	i;
