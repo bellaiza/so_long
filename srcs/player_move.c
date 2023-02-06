@@ -28,6 +28,6 @@ int	key_input(int key, t_mlx *mlx)
 	map_base_print(mlx);
 	mlx_put_image_to_window(mlx->mlx, mlx->win, \
 							mlx->player, mlx->p_x, mlx->p_y);
-	printf("Number of steps: %d\n", mlx->p_steps); //contador de passos
+	printf("Number of steps: %d\n", mlx->p_steps);
 	return (0);
 }
